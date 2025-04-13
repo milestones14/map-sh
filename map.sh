@@ -176,7 +176,7 @@ clear
 # Initialize background monitoring variables
 tempFile="/tmp/folderSize_$$.txt"
 folderSizePid=""
-folderSize="Calculating..."
+folderSize="unknown file size"
 
 # Start background folder size calculation
 if [[ -d "$1" ]] && [ "$dirSize" = "1" ]; then
@@ -216,7 +216,7 @@ if [ -n "$folderSizePid" ]; then
     done
     
     if kill -0 $folderSizePid 2>/dev/null; then
-        # If still running after short wait, keep original "Calculating..." message
+        # If still running after short wait, keep original "unknown file size" message
         true
     else
         # Read the final size if process completed
