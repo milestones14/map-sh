@@ -125,12 +125,12 @@ map_all_contents() {
 
 if [[ ! -e $1 ]]; then
     echo "ERROR: The provided path does not exist."
-    return 1
+    exit 1
 fi
 
 if [[ ! -d $1 ]]; then
     echo "ERROR: The provided path is not a directory."
-    return 1
+    exit 1
 fi
 
 # Ensure flags are only set when explicitly passed
