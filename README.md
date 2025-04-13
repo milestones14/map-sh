@@ -10,20 +10,24 @@ _Want to see Map.sh for Linux? [Open an issue.](https://github.com/milestones14/
 - 📊 Calculates folder sizes
 - 🔍 Filtering options for hidden files and subdirectories
 - 💾 Save output to file
-- 🚀 Special handling for macOS-specific directories (.app, .framework, etc.)
+- 🚀 Special handling for macOS-specific directories (`.app`, `.framework`, etc.)
 
 ## Usage
 
 ```bash
 ./map.sh <directory> [save]
-
-# Options
---ignore-hidden       # Skip hidden files and directories
---no-subdir           # Don't recurse into subdirectories
---only-folders        # Show only folders, skip files
---ignore-pkg-contents # Skip contents of .app, .framework, etc.
---no-size             # Don't calculate folder sizes
 ```
+
+## Options
+| Flag                    | Description                                       |
+|------------------------ | ------------------------------------------------- |
+| `--ignore-hidden`       | Skip hidden files and directories.                |
+| `--no-subdir`           | Don't recurse into subdirectories.                |
+| `--only-folders`        | Show only folders, skip files.                    |
+| `--ignore-pkg-contents` | Skip **_contents_** of `.app`, `.framework`, etc. |
+| `--no-size`             | Don't calculate folder sizes.                     |
+| `--save`                | Save the directory tree to a file.                |
+
 
 ## Example Output
 
@@ -47,7 +51,7 @@ $ ./map.sh ~/Documents
 
 ## Notes
 
-- Handles special macOS package types (.app, .bundle, .framework, .xcodeproj, .xcworkspace)
+- Handles special macOS package types (`.app`, `.bundle`, `.framework`, `.xcodeproj`, `.xcworkspace`)
 - Supports Unicode filenames and paths with spaces
 - Provides real-time size calculation feedback
 - Progress indicators for large directories
