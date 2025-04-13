@@ -19,14 +19,14 @@ _Want to see Map.sh for Linux? Found a bug or have ideas for improvement? [Open 
 ```
 
 ## Options
-| Flag                    | Description                                       |
-|------------------------ | ------------------------------------------------- |
-| `--ignore-hidden`       | Skip hidden files and directories.                |
-| `--no-subdir`           | Don't recurse into subdirectories.                |
-| `--only-folders`        | Show only folders, skip files.                    |
-| `--ignore-pkg-contents` | Skip **_contents_** of `.app`, `.framework`, etc. |
-| `--no-size`             | Don't calculate folder sizes.                     |
-| `--save`                | Save the directory tree to a file.                |
+| Flag                    | Description                                       | Version of Map.sh |
+|------------------------ | ------------------------------------------------- | ----------------- |
+| `--ignore-hidden`       | Skip hidden files and directories.                | 1.0               |
+| `--no-subdir`           | Don't recurse into subdirectories.                | 1.0               |
+| `--only-folders`        | Show only folders, skip files.                    | 1.0               |
+| `--ignore-pkg-contents` | Skip **_contents_** of `.app`, `.framework`, etc. | 1.0               |
+| `--no-size`             | Don't calculate folder sizes.                     | 1.0               |
+| `--save`                | Save the directory tree to a file.                | 1.0               |
 
 
 ## Example Output
