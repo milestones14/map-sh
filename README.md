@@ -15,18 +15,18 @@ _Want to see Map.sh for Linux? Found a bug or have ideas for improvement? [Open 
 ## Usage
 
 ```bash
-./map.sh <directory> [save]
+./map.sh <directory> [options]
 ```
 
 ## Options
 | Flag                    | Description                                       | Version of Map.sh |
 |------------------------ | ------------------------------------------------- | ----------------- |
-| `--ignore-hidden`       | Skip hidden files and directories.                | 1.0               |
-| `--no-subdir`           | Don't recurse into subdirectories.                | 1.0               |
-| `--only-folders`        | Show only folders, skip files.                    | 1.0               |
-| `--ignore-pkg-contents` | Skip **_contents_** of `.app`, `.framework`, etc. | 1.0               |
-| `--no-size`             | Don't calculate folder sizes.                     | 1.0               |
-| `--save`                | Save the directory tree to a file.                | 1.0               |
+| `--ignore-hidden`       | Skip hidden files and directories.                | 1.0.0             |
+| `--no-subdir`           | Don't recurse into subdirectories.                | 1.0.0             |
+| `--only-folders`        | Show only folders, skip files.                    | 1.0.0             |
+| `--ignore-pkg-contents` | Skip **_contents_** of `.app`, `.framework`, etc. | 1.0.0             |
+| `--no-size`             | Don't calculate folder sizes.                     | 1.0.0             |
+| `--save`                | Save the directory tree to a file.                | 1.0.0             |
 
 
 ## Example Output
@@ -43,6 +43,24 @@ $ ./map.sh ~/Documents
 
 [DONE - 3 FOLDERS, 1 FILE, 4 ITEMS, 184MB TOTAL]
 ```
+
+## Get Started
+To download and run Map.sh, [get the latest release](https://github.com/milestones14/map-sh/releases). Note that releases only have the latest main version of Map.sh (e.g: `1.0.0`, `2.0.0`, etc.). Here's how to use the latest **_incremental_** version (e.g: `1.0.1`, `1.2.3`, etc.):
+
+Paste the following into your terminal:
+```bash
+git clone https://github.com/milestones14/map-sh.git
+cd map-sh
+
+
+chmod +x map.sh
+```
+
+Now you can run the script:
+```bash
+source map.sh <directory> [options]
+```
+
 
 ## Requirements
 
