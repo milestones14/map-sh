@@ -3,7 +3,7 @@
 A bash script that generates a hierarchical tree view of directory contents with advanced features for macOS.
 <br />
 <br />
-_Want to see Map.sh for Linux? [Open an issue.](https://github.com/milestones14/map-sh/issues/new)_
+_Want to see Map.sh for Linux? Found a bug or have ideas for improvement? [Open an issue.](https://github.com/milestones14/map-sh/issues/new)_
 ## Features
 
 - 📁 Maps directory structure with visual tree representation
