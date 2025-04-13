@@ -45,7 +45,7 @@ map_all_contents() {
         while IFS= read -r -d $'\0' item; do
             # Get the raw filename first
             baseName=$(basename "$item")
-            
+
             # Remove any carriage returns and handle special characters
             clean_name=$(echo "$baseName" | tr -d '\r' | sed 's/\\\([[:space:]()\\[\]]\)/\1/g')
 
@@ -117,7 +117,7 @@ map_all_contents() {
                 ext=$(get_extension "$item")
                 # Print the cleaned filename
                 printf "%s| - %s [%sfile]\n" "$prefix" "$clean_name" "${ext}"
-                [[ "$save" == "save" ]] && [[ "$only" == "files" || "$only" == "all" ]] && printf "%s| - %s [%sfile]\n" "$prefix" "$clean_name" "${ext}" >> "$randname"
+                [[ "$save" == "save" ]] && [[ "$only" == "files" || "$only" == "all" ]] && printf "%s| - %s [%sfile]\n" "$prefix" "$clean_name" "${ext}" >>"$randname"
             fi
         done < <(find "$dir" -mindepth 1 -maxdepth 1 -print0 2>/dev/null | sort -z)
     fi
@@ -180,7 +180,10 @@ folderSize="unknown file size"
 
 # Start background folder size calculation
 if [[ -d "$1" ]] && [ "$dirSize" = "1" ]; then
-    (get_folder_size "$1" > "$tempFile"; kill -USR1 $$) &
+    (
+        get_folder_size "$1" >"$tempFile"
+        kill -USR1 $$
+    ) &
     folderSizePid=$!
 fi
 
@@ -214,7 +217,7 @@ if [ -n "$folderSizePid" ]; then
         sleep 0.1
         ((wait_count++))
     done
-    
+
     if kill -0 $folderSizePid 2>/dev/null; then
         # If still running after short wait, keep original "unknown file size" message
         true
