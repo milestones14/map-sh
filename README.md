@@ -55,6 +55,3 @@ $ ./map.sh ~/Documents
 - Supports Unicode filenames and paths with spaces
 - Provides real-time size calculation feedback
 - Progress indicators for large directories
-<br />
-<br />
-<br />
