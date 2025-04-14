@@ -123,6 +123,19 @@ map_all_contents() {
     fi
 }
 
+if [[ -z "$1" ]] || [[ "$*" == *"--help"* ]]; then
+    echo "Usage: $0 <directory> [options]"
+    echo "Options:"
+    echo "  --ignore-hidden       Ignore hidden files and folders"
+    echo "  --save                Save the output to a file"
+    echo "  --no-subdir           Ignore subdirectories"
+    echo "  --only-folders        Only show folders"
+    echo "  --ignore-pkg-contents Ignore package contents"
+    echo "  --no-size             Do not calculate folder size"
+    echo "  --help                Show this help message"
+    echo "  --version             Show version information"
+fi
+
 if [[ ! -e $1 ]]; then
     echo "ERROR: The provided path does not exist."
     exit 1
