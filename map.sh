@@ -7,6 +7,7 @@ items=0
 folders=0
 noHidden=0
 noSubdir=0
+version="1.1.0"
 folderSize="unknown file size"
 randname="$HOME/Documents/map-""$RANDOM"".txt"
 
@@ -134,6 +135,7 @@ if [[ -z "$1" ]] || [[ "$*" == *"--help"* ]]; then
     echo "  --no-size             Do not calculate folder size"
     echo "  --help                Show this help message"
     echo "  --version             Show version information"
+    exit 0
 fi
 
 if [[ ! -e $1 ]]; then
@@ -181,6 +183,12 @@ if [[ "$*" == *"--no-size"* ]]; then
     dirSize="0"
 else
     dirSize="1"
+fi
+
+
+if [[ "$*" == *"--version"* ]]; then
+    echo "Map.sh version $version"
+    exit 0
 fi
 
 # Optional clear screen
