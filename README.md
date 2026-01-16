@@ -45,22 +45,7 @@ $ ./map.sh ~/Documents
 ```
 
 ## Get Started
-To download and run Map.sh, [get the latest release](https://github.com/milestones14/map-sh/releases). Note that releases only have the latest main version of Map.sh (e.g: `1.0.0`, `2.0.0`, etc.). Here's how to use the latest **_incremental_** version (e.g: `1.0.1`, `1.2.3`, etc.):
-
-Paste the following into your terminal:
-```bash
-git clone https://github.com/milestones14/map-sh.git
-cd map-sh
-
-
-chmod +x map.sh
-```
-
-Now you can run the script:
-```bash
-source map.sh <directory> [options]
-```
-
+To download and run Map.sh, [get the latest release](https://github.com/milestones14/map-sh/releases). Make sure to run `chmod +x path/to/map.sh` after downloading and unzipping.
 
 ## Requirements
 
